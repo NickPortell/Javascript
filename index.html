@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Calculator</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <h1>This page works!</h1>
+
+    <div id="Result" class="Output">
+        
+    </div>
+
+    <div id="Buttons" class="calcButtons">
+
+
+
+       <!----<input id="numSides" type="number" min="2" max="99" step="1" value="6" />-->
+        <div class="numbers">
+            <button id = "0" type="button" onclick="append('0')">0</button>
+            <button id = "1" type="button" onclick="append('1')">1</button>
+            <button id = "2" type="button" onclick="append('2')">2</button>
+            <button id = "3" type="button" onclick="append('3')">3</button>
+            <button id = "4" type="button" onclick="append('4')">4</button>
+            <button id = "5" type="button" onclick="append('5')">5</button>
+            <button id = "6" type="button" onclick="append('6')">6</button>
+            <button id = "7" type="button" onclick="append('7')">7</button>
+            <button id = "8" type="button" onclick="append('8')">8</button>
+            <button id = "9" type="button" onclick="append('9')">9</button>
+        </div>
+        <div class="Operators">
+                <button id = "Add" type="button" onclick="append('+')">+</button>
+                <button id = "Subtract" type="button" onclick="append('-')">-</button>
+                <button id = "Multiply" type="button" onclick="append('X')">X</button>
+                <button id = "Divide" type="button" onclick="append('/')">/</button>
+                <button id = "Result" type="button" onclick="compile()">=</button>
+            </div>
+
+            <div>
+                <input type="text" id = "answer"  />
+            </div>
+    </div>
+
+    <script src="Calculator.js"></script>
+
+</body>
+
+</html>
