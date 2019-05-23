@@ -1,6 +1,5 @@
 var numString = "";
 var numSubString = "";
-var numSubString2 = "";
 var tempSum = 0;
 var operator;
 var num;
@@ -8,87 +7,85 @@ var num;
 
 function append(num) {
     numString += num;
-    var answerEl = document.getElementById('answer');
+    var answerEl = document.getElementById('input');
     answerEl.value += num;
-    console.log(num);
+    console.log(answerEl.value);
 }
 
 function compile() {
 
-    numString+= '=';
+    numString += '=';
     console.log(numString);
-    
-    for (var i = 0; i < numString.Length; i++) {
+    var answerEl = document.getElementById('screen');
 
-        
-        if (numString[i] === "+") {
-            tempSum += Number(numSubString);
+    for (var i = 0; i < Number(numString.length); i++) {
+        if (numString.charAt(i) === "+") {
+            tempSum = Number(numSubString);
             numSubString = "";
-            operator = numString[i];
-            console.log(tempSum);
+            operator = numString.charAt(i);
 
         }
-        else if (numString[i] === "-") {
-            tempSum -= Number(numSubString);
+        else if (numString.charAt(i) === "-") {
+            tempSum = Number(numSubString);
             numSubString = "";
-            operator = numString[i];
-            console.log(tempSum);
+            operator = numString.charAt(i);
 
         }
-        else if (numString[i] === "X") {
-            tempSum *= Number(numSubString);
+        else if (numString.charAt(i) === "X") {
+            tempSum = Number(numSubString);
             numSubString = "";
-            operator = numString[i];
-            console.log(tempSum);
+            operator = numString.charAt(i);
 
         }
-        else if (numString[i] === "/") {
-            tempSum /= Number(numSubString);
+        else if (numString.charAt(i) === "/") {
+            tempSum = Number(numSubString);
             numSubString = "";
-            operator = numString[i];
-            console.log(tempSum);
+            operator = numString.charAt(i);
 
         }
-        else if (numString[i] === "="){
-            var answerEl = document.getElementById('answer');
+        else if (numString.charAt(i) === "=") {
+
+            switch (operator) {
+                case '+': {
+                    tempSum += Number(numSubString);
+                    numSubString = "";
+                    break;
+                }
+                case '-': {
+                    tempSum -= Number(numSubString);
+                    numSubString = "";
+                    break;
+                }
+                case 'X': {
+                    tempSum *= Number(numSubString);
+                    numSubString = "";
+                    break;
+                }
+                case '/': {
+                    tempSum /= Number(numSubString);
+                    numSubString = "";
+                    break;
+                }
+                default:
+                    {
+                        break;
+                    }
+            }
+
             answerEl.value = tempSum;
-            console.log(tempSum);
-        break;
+            console.log(answerEl.value);
+            break;
         }
         else {
-            numSubString += numString[i];
-            console.log(numSubString);
+            numSubString += numString.charAt(i);
         }
     }
 
+    numString = tempSum.toString();
+    operator = "";
+
+}
+function clear() {
+    location.reload(false);
 }
 
-
-
-
-/*if (numString[i] === '+') {
-    numSubString = numString.subString(0, i);
-} 
-if (numString[i] === '-') {
-    numSubString = numString.subString(0, i);
-}
-if (numString[i] === 'X') {
-    numSubString = numString.subString(0, i);
-}
-if (numString[i] === '/') {
-    numSubString = numString.subString(0, i);
-}*/
-
-
-function Multiply(num1, num2) {
-    var sum = numString1 * numString2;
-}
-function Addition() {
-    var sum = numString1 * numString2;
-}
-function Substraction() {
-    var sum = numString1 * numString2;
-}
-function Division() {
-    var sum = numString1 * numString2;
-}

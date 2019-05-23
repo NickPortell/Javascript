@@ -1,0 +1,113 @@
+
+head{
+    display: grid;
+    color: black;
+    text-align: start;
+  }
+  button
+  {
+    align-items: flex-start;
+    text-align: center;
+    background-color: LightSlateGray;
+    font-family:"Orbitron";
+    font-size:25px;
+    color:white;
+    display: inline-block
+  
+  }
+  button:hover{
+    background-color: gray;
+    color:black;
+  }
+  button:active{
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
+  }
+  body{
+      display:grid;
+      place-items: center;
+      justify-items:center;
+      width: 50%;
+      margin: auto;
+      color:white;
+  }
+  #Buttons{
+      padding:5px;
+      background-color:black;
+      width:210px;
+      height:148px;
+      display:-moz-inline-grid;
+      
+      
+  }
+  #screen{
+      grid-area:auto;
+      color:white;
+      text-align:right;
+      background:DarkSlateGray;
+      border:none;
+      font-size:18px;
+      font-family:"Tinos";
+  }
+  #input{
+      grid-area:auto;
+      color:white;
+      text-align:right;
+      background:black;
+      border:none;
+      font-size:18px;
+      font-family:"Tinos";
+  
+  }
+  #Divide{
+      grid-area:auto;
+  }
+  #Multiply{
+      grid-area:auto;
+  }
+  #Clear{
+      grid-area:auto;
+      background:rgb(172,57,57);
+  }
+  #Add{
+      grid-area:auto;
+      }
+  #Subtract{
+      grid-area:auto;
+  }
+  #seven{
+      grid-area:auto;
+  }
+  #eight{
+      grid-area:auto;
+  }
+  #nine{
+      grid-area:auto;
+  }
+  #four{
+      grid-area:auto;
+  }
+  #five{
+      grid-area:auto;
+  }
+  #three{
+      grid-area:auto;
+  }
+  #two{
+      grid-area:auto;
+  }
+  #one{
+      grid-area:auto;
+      }
+  #zero{
+      grid-area:auto;
+  }
+  #Result{
+      grid-area:auto;
+  }
+  #six{
+      grid-area:auto;
+  }
+  span{
+      vertical-align:middle;
+  }
