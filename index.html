@@ -11,32 +11,35 @@
 
 <body>
     <h1>CALCULATE ME!</h1>
-    <div id="Buttons" class="calcButtons">
+    <form name="myForm" id="myForm">
+        <div id="Buttons" class="calcButtons">
             <div id="Result" class="Output">
-                    <input type="text" id="screen" />
-                    <input type="text" id="input" />
-                </div>
-        <div class="Operators">
-            <button id="Add" type="button" onclick="append('+')">+</button>
-            <button id="Subtract" type="button" onclick="append('-')">-</button>
-            <button id="Multiply" type="button" onclick="append('X')">X</button>
-            <button id="Divide" type="button" onclick="append('/')">/</button>
-            <button id="Result" type="button" onclick="compile()">=</button>
-            <button id="Clear" type="button" onclick="clear()">CE</button>
+                <input type="text" id="screen" />
+                <input type="text" id="input" />
+            </div>
+
+            <div class="Operators">
+                <button id="Add" type="button" onclick="append('+')">+</button>
+                <button id="Subtract" type="button" onclick="append('-')">-</button>
+                <button id="Multiply" type="button" onclick="append('X')">X</button>
+                <button id="Divide" type="button" onclick="append('/')">/</button>
+                <button id="Result" type="button" onclick="compile()">=</button>
+                <button id="Clear" type="button" onclick="this.form.reset(); clear();">CE</button>
+            </div>
+            <div class="numbers">
+                <button id="zero" type="button" onclick="append('0')">0</button>
+                <button id="one" type="button" onclick="append('1')">1</button>
+                <button id="two" type="button" onclick="append('2')">2</button>
+                <button id="three" type="button" onclick="append('3')">3</button>
+                <button id="four" type="button" onclick="append('4')">4</button>
+                <button id="five" type="button" onclick="append('5')">5</button>
+                <button id="six" type="button" onclick="append('6')">6</button>
+                <button id="seven" type="button" onclick="append('7')">7</button>
+                <button id="eight" type="button" onclick="append('8')">8</button>
+                <button id="nine" type="button" onclick="append('9')">9</button>
+            </div>
         </div>
-        <div class="numbers">
-            <button id="zero" type="button" onclick="append('0')">0</button>
-            <button id="one" type="button" onclick="append('1')">1</button>
-            <button id="two" type="button" onclick="append('2')">2</button>
-            <button id="three" type="button" onclick="append('3')">3</button>
-            <button id="four" type="button" onclick="append('4')">4</button>
-            <button id="five" type="button" onclick="append('5')">5</button>
-            <button id="six" type="button" onclick="append('6')">6</button>
-            <button id="seven" type="button" onclick="append('7')">7</button>
-            <button id="eight" type="button" onclick="append('8')">8</button>
-            <button id="nine" type="button" onclick="append('9')">9</button>
-        </div>
-    </div>
+    </form>
 
     <script src="Calculator.js"></script>
 

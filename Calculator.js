@@ -86,6 +86,8 @@ function compile() {
 
 }
 function clear() {
-    location.reload(false);
+    numSubString = '';
+    numString = '';
+    operator = '';
 }
 
